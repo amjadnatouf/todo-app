@@ -42,8 +42,8 @@ const createTodoElement = (todo, parent, placement, isNew) => {
   <div class="border-bottom ${isNew ? 'slide-in' : ''}" id="todo_${todo._id}">
     <div class="container d-flex justify-content-between align-items-center px-5 py-2 gap-3">
       <p id="title_${todo._id}" class="title h5 m-0 ${todo.completed ? 'complete' : ''} ">${todo.title}</p>
-      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#updateTodo" onclick="showModal('${todo._id}')">
-      update
+      <button type="button" class="btn text-success shadow-none" data-bs-toggle="modal" data-bs-target="#updateTodo" onclick="showModal('${todo._id}')">
+      <i class="fa-solid fa-pen-to-square"></i>
     </button>
       <i class="fa-solid fa-trash text-danger" id="delete_${todo._id}"></i>
     </div>
